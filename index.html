@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.3/examples/jumbotron/"
+    />
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.3/examples/album/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="override.css" />
+    <!--Links for the timepicker-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+  </head>
+  <body>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Easy Babe</h1>
+        <p class="lead text-muted">
+          Your simple and efficient <h2>Calendar</h2>
+        </p>
+        <hr>
+        <p class="lead text-muted">
+          Choose the date and insert your task bellow, but remember to enjoy your life!
+        </p>
+        <div id="MyClockDisplay" class="clock" onload="showTime()">cloxk</div>
+        <br>
+
+        <!--<a href="#" class="btn btn-primary my-2">Contact your team</a>
+              <p>
+              <a href="#" class="btn btn-secondary my-2">Contact your patient</a>
+            </p>-->
+            <div class="container">
+                <div class="row">
+                  <div class='col-sm-5'>
+                    <div class="form-group">
+                      <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </section>
+    <container>
+      <!--<div class="table">
+        <div class="row">
+          <div class='col-md-3 time-block'>9AM</div>
+          <div class='col-md-9'><input type='text' class="description"/></div>
+          <div class='col-md-3'>
+            <button class='saveBtn'></button></div>
+        </div>-->
+
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">9:00</div>
+        <textarea class="col-sm-4 todo" contenteditable="true">Insert your task</textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">10:00</div>
+        <textarea class="col-sm-4 todo" contenteditable="true"></textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">11:00</div>
+        <textarea class="col-sm-4" contenteditable="true"></textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">12:00</div>
+        <textarea class="col-sm-4" contenteditable="true">Insert your task</textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">1:00</div>
+        <textarea class="col-sm-4" contenteditable="true"></textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">2:00</div>
+        <textarea class="col-sm-4" contenteditable="true"></textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">3:00</div>
+        <textarea class="col-sm-4">todo</textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">4:00</div>
+        <textarea class="col-sm-4" contenteditable="true"></textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+      <div class="d-flex">
+        <div class="col"></div>
+        <div class="col">5:00</div>
+        <textarea class="col-sm-4" contenteditable="true">todo</textarea>
+        <div class="btn-group">
+          <button id="saveBtn" type="button" class="btn btn-sm btn-outline-secondary">
+            Save
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+      <hr />
+    </container>
+
+    <script src="javascript.js"></script>
+  </body>
+  <div class="d-flex"></div>
+  <hr />
+  <footer>RJN</footer>
+</html>
